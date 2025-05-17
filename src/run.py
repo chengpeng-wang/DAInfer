@@ -627,6 +627,8 @@ def sortOMTSpec(specs: dict):
         fieldConfidence,
         specStr,
     ) in flatenSpecs:
+        if opVal == 0.0:
+            continue
         acceptSpecs.append(
             (packageName, className, sig1, sig2, opVal, fieldConfidence, specStr)
         )
